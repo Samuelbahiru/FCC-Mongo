@@ -9,7 +9,21 @@ mongoose
     console.log("Db is connected");
   });
 
-let Person;
+const personSchema = mongoose.Schema({
+  name: {
+    type: String,
+    required,
+  },
+
+  age: {
+    type: Number,
+  },
+  favoriteFoods: {
+    type: [String],
+  },
+});
+
+let Person = mongoose.model("person", personSchema);
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
