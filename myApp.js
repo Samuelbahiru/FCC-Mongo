@@ -31,11 +31,10 @@ const createAndSavePerson = (done) => {
     age: 23,
     favoriteFoods: "banana",
   });
-  newPerson.save((req, res) => {
-    console.log("it is saved", res);
+  newPerson.save((err, data) => {
+    if (err) return console.log("Error", err);
+    done(null, data);
   });
-
-  done(null /*, data*/);
 };
 
 const createManyPeople = (arrayOfPeople, done) => {
