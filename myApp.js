@@ -23,7 +23,7 @@ const personSchema = mongoose.Schema({
   },
 });
 
-let Person = mongoose.model("person", personSchema);
+let Person = mongoose.model("Person", personSchema);
 
 const createAndSavePerson = (done) => {
   done(null /*, data*/);
