@@ -32,7 +32,7 @@ const createAndSavePerson = (done) => {
     favoriteFoods: "banana",
   });
   newPerson.save((req, res) => {
-    console.log("it is saved");
+    console.log("it is saved", res);
   });
 
   done(null /*, data*/);
