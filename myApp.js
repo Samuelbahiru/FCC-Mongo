@@ -27,12 +27,15 @@ let Person = mongoose.model("Person", personSchema);
 
 const createAndSavePerson = (done) => {
   let newPerson = new Person({
-    name: "samuel",
+    name: "Samuel",
     age: 23,
-    favoriteFoods: ["banana", "cake"],
+    favoriteFoods: ["banana", "apple"], // Assuming an array of favorite foods
   });
+
   newPerson.save(function (err, data) {
-    if (err) return console.error(err);
+    if (err) {
+      return console.error(err);
+    }
     done(null, data);
   });
 };
