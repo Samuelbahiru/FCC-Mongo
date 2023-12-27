@@ -12,7 +12,7 @@ mongoose
 const personSchema = mongoose.Schema({
   name: {
     type: String,
-    required,
+    required: true,
   },
 
   age: {
