@@ -31,8 +31,8 @@ const createAndSavePerson = (done) => {
     age: 23,
     favoriteFoods: "banana",
   });
-  newPerson.save((err, data) => {
-    if (err) return console.log("Error", err);
+  newPerson.save(function (err, data) {
+    if (err) return console.error(err);
     done(null, data);
   });
 };
