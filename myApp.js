@@ -5,7 +5,7 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then((req, res) => {
+  .then((client) => {
     console.log("Db is connected");
   });
 
