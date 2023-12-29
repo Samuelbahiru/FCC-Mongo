@@ -42,10 +42,9 @@ const createAndSavePerson = (done) => {
   });
 };
 
-const createManyPeople = async (arrayOfPeople, done) => {
-  console.log("arrayofpeople", arrayOfPeople);
-  const newPerson = await Person.create(arrayOfPeople);
-  newPerson.save((err, data) => {
+const createManyPeople = (arrayOfPeople, done) => {
+  const newPerson = Person.create(arrayOfPeople);
+  newPerson.save(function (err, data) {
     if (err) {
       return console.error(err);
     }
